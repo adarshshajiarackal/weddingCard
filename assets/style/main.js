@@ -65,28 +65,6 @@ $(document).ready(function () {
 
     setInterval(updateCountdown, 1000);
     updateCountdown();
- 
-    let audio = $('audio')[0];
-
-    // autoplay when page loads
-    audio.play().catch(function(error){
-        console.log("Autoplay blocked:", error);
-    });
-
-    $('.play').click(function (e) { 
-        e.preventDefault();
-
-        let icon = $(this).find('i');
-
-        if (audio.paused) {
-            audio.play();
-            icon.removeClass('bi-play-fill').addClass('bi-pause-fill');
-        } else {
-            audio.pause();
-            icon.removeClass('bi-pause-fill').addClass('bi-play-fill');
-        }
-    });
-
   function createSparkle(x, y) {
     const sparkle = document.createElement('div');
     sparkle.classList.add('sparkle');
@@ -108,4 +86,31 @@ setInterval(() => {
 
     createSparkle(x, y);
 }, 100);
+});
+
+
+
+$(document).ready(function () {
+
+    let audio = $('audio')[0];
+
+    // autoplay when page loads
+    audio.play().catch(function(error){
+        console.log("Autoplay blocked:", error);
+    });
+
+    $('.play').click(function (e) { 
+        e.preventDefault();
+
+        let icon = $(this).find('i');
+
+        if (audio.paused) {
+            audio.play();
+            icon.removeClass('bi-play-fill').addClass('bi-pause-fill');
+        } else {
+            audio.pause();
+            icon.removeClass('bi-pause-fill').addClass('bi-play-fill');
+        }
+    });
+
 });
