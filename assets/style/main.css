@@ -207,10 +207,10 @@ opacity: 0;
 @media screen and (max-width:628px) {
     .walima i{
         position: absolute;
-        left:18px !important;
+        left:30% !important;
     }
     .nikah i{
-        left: 16px;
+        left: 30%;
     }
 }
 .walima i::after{
@@ -342,4 +342,7 @@ opacity: 0;
         opacity: 0;
         transform: scale(0.5) translateY(-20px);
     }
+}
+#cardInv{
+    z-index: 3000 !important;
 }
