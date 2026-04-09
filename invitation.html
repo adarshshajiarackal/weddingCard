@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="overflow-x-hidden">
+    <div class="position-absolute">
+        <audio autoplay loop>
+            <source src="assets/images/music.mp4" type="">
+        </audio class="d-none">
+        <button class="play">
+            <i class="bi bi-play-fill"></i>
+        </button>
+    </div>
+    <div class="container-fluid p-3" id="invOne">
+        <div class="container-fluid d-flex flex-column justify-content-center align-items-center"
+            style="height: 100dvh;">
+            <div class="mainSec d-flex justify-content-center align-items-center mt-5" data-aos="fade-in"
+                data-aos-duration="2100">
+                <div class="line"></div>
+                <p class="subHead">Two Heart One Soul 💕</p>
+                <div class="line"></div>
+            </div>
+            <div class="gbName text-center">
+                <h1 data-aos="zoom-in" data-aos-duration="2000">Naqeeb Naushad</h1>
+                ❤️
+                <h1 data-aos="zoom-in" data-aos-duration="2000">Fathima Shahana</h1>
+            </div>
+            <div class="text-center" data-aos="zoom-in" data-aos-duration="2200">
+                <p class="subHead">"With love and prayers, we invite you to celebrate our union”</p>
+            </div>
+            <div class="container d-flex justify-content-center align-items-center">
+                <img class="img-fluid object-fit-cover img-co" src="assets/images/couple.png" alt="" data-aos="zoom-in"
+                    data-aos-duration="1200">
+            </div>
+        </div>
+    </div>
+    <div class="petal-container">
+        <span class="petal"></span>
+        <span class="petal"></span>
+        <span class="petal"></span>
+        <span class="petal"></span>
+        <span class="petal"></span>
+        <span class="petal"></span>
+        <span class="petal"></span>
+    </div>
+    <div class="container-fluid position-relative mt-5" id="map">
+        <img class="img-fluid position-absolute img-rose" src="assets/images/3.png" alt="">
+        <div class="col-12">
+            <img class="img-fluid" src="assets/images/full.png" alt="">
+            <p class="malappuram">Malappuram</p>
+            <p class="ernak">Ernakulam</p>
+        </div>
+    </div>
+    <h1 class="text-center pb-3 font-head mt-5">
+        We Set A Date
+    </h1>
+    <div class="container-fluid calander">
+
+        <h1 class="text-center pb-3">
+            April 2026
+        </h1>
+        <div class="row pb-3">
+            <div class="col text-center">Sat</div>
+            <div class="col text-center">Sun</div>
+            <div class="col text-center">Mon</div>
+            <div class="col text-center">Tue</div>
+            <div class="col text-center">Wen</div>
+            <div class="col text-center">Thr</div>
+        </div>
+        <div class="row pb-3">
+            <div class="col text-center">18</div>
+            <div class="col text-center position-relative nikah">
+                19
+                <i class="bi bi-heart"></i>
+            </div>
+            <div class="col text-center">20</div>
+            <div class="col text-center position-relative walima">
+                21
+                <i class="bi bi-heart"></i>
+
+            </div>
+            <div class="col text-center">22</div>
+            <div class="col text-center">23</div>
+        </div>
+    </div>
+    <div class="container-fluid" id="calan">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-6 col-sm-12  p-3" data-aos="fade-right" data-aos-duration="2100">
+                    <div class="card pt-2 pb-2 nikahCon">
+                        <h2 class="text-center pt-1 mb-3">Nikah Ceremony</h2>
+                        <div class="d-flex gap-2 text-center justify-content-center align-items-center mb-3">
+
+                            <p>Date : 19 April 2026</p>
+                        </div>
+                        <div class="d-flex gap-2 text-center justify-content-center align-items-center mb-3">
+
+                            <p>Venu : PMR Grandays - Malappuram </p>
+                        </div>
+                        <div class="countdown text-center mb-5">
+                            <h2>Countdown to Nikah </h2>
+
+                            <div class="timer d-flex justify-content-center gap-lg-3 gap-sm-1">
+                                <div><span id="days">0</span>
+                                    <p>Days</p>
+                                </div>
+                                <div><span id="hours">0</span>
+                                    <p>Hours</p>
+                                </div>
+                                <div><span id="minutes">0</span>
+                                    <p>Minutes</p>
+                                </div>
+                                <div><span id="seconds">0</span>
+                                    <p>Seconds</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                            <a href="https://maps.app.goo.gl/ZwzG6a3RCYSKgvYi8" class="btn btn-outline"
+                                target="_blank">View Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12  p-3" data-aos="fade-up" data-aos-duration="2100">
+                    <div class="card pt-2 pb-2 nikahCon">
+                        <h2 class="text-center pt-1 mb-3">Walima Ceremony</h2>
+                        <div class="d-flex gap-2 text-center justify-content-center align-items-center mb-3">
+
+                            <p>Date : 21 April 2026</p>
+                        </div>
+                        <div class="d-flex gap-lg-2  text-center justify-content-center align-items-center mb-3">
+                            <p class="text-wrap">Venu : Marina Convention Centre - kochi </p>
+                        </div>
+                        <div class="countdown text-center mb-5">
+                            <h2>Countdown to Walima </h2>
+
+                            <div class="timer d-flex justify-content-center ">
+                                <div><span id="days1">0</span>
+                                    <p>Days</p>
+                                </div>
+                                <div><span id="hours1">0</span>
+                                    <p>Hours</p>
+                                </div>
+                                <div><span id="minutes1">0</span>
+                                    <p>Minutes</p>
+                                </div>
+                                <div><span id="seconds1">0</span>
+                                    <p>Seconds</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center mb-3">
+                            <a href="https://maps.app.goo.gl/ZwzG6a3RCYSKgvYi8" class="btn btn-outline"
+                                target="_blank">View Map</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid invitation">
+            <div class="row">
+                <div class="col-12 d-lg-flex d-sm-block justify-content-center align-items-center">
+                    <img src="img/bestWishes.png" alt="" srcset="" class="img-fluid">
+                    <p class="text-center text-wrap">
+                        “With the blessings of Allah, we invite you to be a part of our joyous celebration as we begin
+                        our new journey together.”
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid p-0" id="greetings">
+        <img class="img-fluid h-25" src="assets/images/bg-strip.png" alt="">
+        <div class="d-flex flex-column justify-content-center align-items-center p-1">
+           <div class="text-center">
+             <p class="text-center subHeadB" data-aos="fade-up" data-aos-duration="1200">
+                Best compliments from
+            </p>
+           </div>
+          <div class="text-center">
+              <p class="text-center subHeadC" data-aos="zoom-in" data-aos-duration="1300">
+                Naushad & Nazly
+                <br>
+                Nadiq, Farha, Naveed, Shahnaz, Norah, Hamza, Nafisa
+            </p>
+          </div>
+        </div>
+        <p class="text-center">--------------------------------------</p>
+        <div class="d-flex flex-column justify-content-center align-items-center p-1">
+          <div class="text-center">
+              <p class="text-center subHeadC">
+               Mohammed Rafeeq & Sharafunnia
+                <br>
+               Aysha Thanha, Nahida Thahseen, Riya Nourin, Hadid Al Ameen
+            </p>
+          </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="assets/style/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
