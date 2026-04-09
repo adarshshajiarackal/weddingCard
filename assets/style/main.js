@@ -65,21 +65,28 @@ $(document).ready(function () {
 
     setInterval(updateCountdown, 1000);
     updateCountdown();
- let audio = $('audio')[0];
+ 
+    let audio = $('audio')[0];
 
-$('.play').click(function (e) { 
-    e.preventDefault();
+    // autoplay when page loads
+    audio.play().catch(function(error){
+        console.log("Autoplay blocked:", error);
+    });
 
-    let icon = $(this).find('i'); // find icon inside button
+    $('.play').click(function (e) { 
+        e.preventDefault();
 
-    if (audio.paused) {
-        audio.play();
-        icon.removeClass('bi-play-fill').addClass('bi-pause-fill');
-    } else {
-        audio.pause();
-        icon.removeClass('bi-pause-fill').addClass('bi-play-fill');
-    }
-});
+        let icon = $(this).find('i');
+
+        if (audio.paused) {
+            audio.play();
+            icon.removeClass('bi-play-fill').addClass('bi-pause-fill');
+        } else {
+            audio.pause();
+            icon.removeClass('bi-pause-fill').addClass('bi-play-fill');
+        }
+    });
+
   function createSparkle(x, y) {
     const sparkle = document.createElement('div');
     sparkle.classList.add('sparkle');
